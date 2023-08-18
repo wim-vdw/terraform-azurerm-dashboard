@@ -22,3 +22,9 @@ variable "dashboard_properties" {
   type        = string
   description = "The JSON content template for the dashboard"
 }
+
+variable "additional_tags" {
+  type        = map(string)
+  default     = {}
+  description = "Additional tags for the resource"
+}
