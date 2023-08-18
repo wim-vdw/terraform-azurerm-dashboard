@@ -9,6 +9,7 @@ resource "azurerm_portal_dashboard" "dashboard" {
   resource_group_name  = data.azurerm_resource_group.rg.name
   tags = merge(
     data.azurerm_resource_group.rg.tags,
+    var.additional_tags,
     { hidden-title = var.title }
   )
 }
