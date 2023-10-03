@@ -10,6 +10,7 @@ resource "azurerm_portal_dashboard" "dashboard" {
   tags = merge(
     data.azurerm_resource_group.rg.tags,
     var.additional_tags,
-    { hidden-title = var.title }
+    { hidden-title = var.title },
+    { module-version = "2.0.0" }
   )
 }
