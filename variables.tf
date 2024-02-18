@@ -4,8 +4,13 @@ variable "location" {
 }
 
 variable "resource_group" {
-  type        = string
   description = "The resource group for the dashboard"
+  type = object({
+    id       = string
+    name     = string
+    location = string
+    tags     = map(string)
+  })
 }
 
 variable "name" {
