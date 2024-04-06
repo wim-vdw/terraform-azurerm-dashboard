@@ -7,6 +7,6 @@ resource "azurerm_portal_dashboard" "dashboard" {
     var.resource_group.tags,
     var.additional_tags,
     { hidden-title = var.title },
-    { module-version = "3.0.0" }
+    { module-version = "4.0.0" }
   )
 }
